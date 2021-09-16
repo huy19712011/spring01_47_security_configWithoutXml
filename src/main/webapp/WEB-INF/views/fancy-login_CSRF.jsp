@@ -94,6 +94,11 @@
                                     <button type="submit" class="btn btn-success">Login</button>
                                 </div>
                             </div>
+                            
+                            <!--manually adding tokens-->
+                            <input type="hidden"
+                                   name="${_csrf.parameterName}"
+                                   value="${_csrf.token}"/>
 
                         </form>
 
