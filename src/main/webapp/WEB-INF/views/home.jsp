@@ -26,10 +26,16 @@
         </p>
         
         <hr>
-        <!--add link point to /leaders-->
+        <!--add link point to /leaders--> manager
         <p>
             <a href="${pageContext.request.contextPath}/leaders">LeaderShip Meeting</a>
             (Only for Manager peeps)
+        </p>
+        
+        <!--add link point to /systems--> admin
+        <p>
+            <a href="${pageContext.request.contextPath}/systems">IT systems Meeting</a>
+            (Only for Admin peeps)
         </p>
         
         <hr>
