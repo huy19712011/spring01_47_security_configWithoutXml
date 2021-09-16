@@ -13,11 +13,12 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Login page</title>
-        <style>
+<!--        <style>
             .failed {
                 color: red;
             }
-        </style>
+        </style>-->
+        <link rel="stylesheet" type="text/css" href="css/demo.css">
     </head>
     <body>
         <h3>Custom Login Page</h3>
