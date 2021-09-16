@@ -12,6 +12,6 @@
         <title>Spring config without XML</title>
     </head>
     <body>
-        <h1>Spring mvc configuration without XML</h1>
+        <h1>Spring mvc configuration without XML - tutorial 1 </h1>
     </body>
 </html>
