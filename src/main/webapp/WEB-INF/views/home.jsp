@@ -5,6 +5,7 @@
 --%>
 
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
+<%@taglib uri="http://www.springframework.org/security/tags" prefix="security" %>
 <%@ page isELIgnored="false" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -15,6 +16,15 @@
     </head>
     <body>
         <h1>Spring mvc configuration without XML - tutorial 1 </h1>
+        <hr>
+        
+        <!--display user name and role(s)-->
+        <p>
+            User: <security:authentication property="principal.username"/>
+            <br><br>
+            Role(s): <security:authentication property="principal.authorities" />
+        </p>
+        <hr>
         
         <!--add logout button-->
         <form:form action="${pageContext.request.contextPath}/logout"
