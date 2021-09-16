@@ -19,6 +19,7 @@ public class LoginController {
     public String showMyLoginPage() {
 
         //return "plain-login";
-        return "fancy-login";
+        //return "fancy-login";
+        return "fancy-login_CSRF";
     }
 }
