@@ -17,34 +17,38 @@
     <body>
         <h1>Spring mvc configuration without XML - tutorial 1 </h1>
         <hr>
-        
+
         <!--display user name and role(s)-->
         <p>
             User: <security:authentication property="principal.username"/>
             <br><br>
             Role(s): <security:authentication property="principal.authorities" />
         </p>
-        
+
+
+        <security:authorize access="hasRole('MANAGER')">
+            <!--add link point to /leaders--> manager
+            <p>
+                <a href="${pageContext.request.contextPath}/leaders">LeaderShip Meeting</a>
+                (Only for Manager peeps)
+            </p>
+        </security:authorize>
+
+        <security:authorize access="hasRole('ADMIN')">
+            <!--add link point to /systems--> admin
+            <p>
+                <a href="${pageContext.request.contextPath}/systems">IT systems Meeting</a>
+                (Only for Admin peeps)
+            </p>
+        </security:authorize>
+
         <hr>
-        <!--add link point to /leaders--> manager
-        <p>
-            <a href="${pageContext.request.contextPath}/leaders">LeaderShip Meeting</a>
-            (Only for Manager peeps)
-        </p>
-        
-        <!--add link point to /systems--> admin
-        <p>
-            <a href="${pageContext.request.contextPath}/systems">IT systems Meeting</a>
-            (Only for Admin peeps)
-        </p>
-        
-        <hr>
-        
+
         <!--add logout button-->
         <form:form action="${pageContext.request.contextPath}/logout"
                    method="POST">
             <input type="submit" value="Logout"/>
         </form:form>
     </body>
-    
+
 </html>
